@@ -17,8 +17,27 @@
                 <!-- "https://www.w3schools.com/html/html_forms.asp" bron voor hoe ik een formulier opstel en waar iemand iets kan typen-->
                 <label for="name">Naam:</label>
                 <input type="text" id="name" required>
+
+                <!-- Kern keuzemenu -->
                 <label for="core">Kern:</label>
-                <input type="text" id="core" required>
+                <select id="core" required>
+                    <option value="" disabled selected>Kies een kern</option>
+                    <option value="phoenix-feather">Fenixveer</option>
+                    <option value="dragon-heartstring">Drakenhartsnaar</option>
+                    <option value="unicorn-hair">Eenhoornhaar</option>
+                    <option disabled>--- Zeldzame kernen ---</option>
+                    <option value="thestral-tail-hair">Thestralstaarthaar</option>
+                    <option value="basilisk-horn">Basilisk-hoorn</option>
+                    <option value="wampus-cat-hair">Wampuskat-haar</option>
+                    <option value="thunderbird-feather">Veer van een Thunderbird</option>
+                    <option value="white-river-monster-spine">Haar van een White River Monster</option>
+                    <option value="rougarou-hair">Rougarou-haar</option>
+                    <option value="augurey-feather">Veer van een Augurey</option>
+                </select>
+
+                <!-- Voor een persoon die de website bezoekt neem ik altijd aan dat ze niks van Harry Potter afweten waardoor ik een dropdown menu heb toegevoegd waardoor mensen kunne kiezen en kijken wat de keuzes zijn. 
+                 "https://blog.hubspot.com/website/html-dropdown", "https://www.geeksforgeeks.org/how-to-disable-the-drop-down-list-in-html5/" <-- de bron voor hoe ik een drop down menu heb gebruikt en hoe ik sommige keuzes heb gedissabled.-->
+
                 <label for="length">Lengte (in cm):</label>
                 <input type="number" id="length" required>
                 <label for="owner">Eigenaar:</label>
