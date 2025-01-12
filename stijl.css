@@ -1,0 +1,49 @@
+body {
+    background-image: url(img/harry_potter_wallpaper__gryffindor_pinstripes_by_theladyavatar_d6l7u6e-fullview.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-size: contain;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+/* Verberg het formulier standaard */
+#stick-form {
+    display: none;
+    margin-top: 20px;
+}
+
+.container {
+
+    margin: auto;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form label,
+form input,
+form select,
+form button {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+form button {
+    margin-top: 20px;
+    padding: 2px;
+    font-size: 15px;
+    cursor: pointer;
+}
