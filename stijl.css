@@ -1,4 +1,78 @@
-body {
+#Begin {
+    background-image: url('img/Schermafbeelding 2025-01-12 220607.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100vw;
+
+    text-shadow:
+        0.02px 0.02px white,
+        -0.02px 0.02px white,
+        0.02px -0.02px white,
+        -0.02px -0.02px white;
+    font-size: 35px;
+    font-weight: bolder;
+    font-family: 'Brush Script MT', cursive;
+
+}
+
+#Wands {
+
+    /* text-shadow:
+        0.02px 0.02px white,
+        -0.02px 0.02px white,
+        0.02px -0.02px white,
+        -0.02px -0.02px white; */
+    font-size: 15px;
+    font-weight: bolder;
+    font-family: 'Brush Script MT', cursive;
+
+}
+
+
+h1,
+h2,
+h3 {
+    font-family: 'Harry Potter', sans-serif;
+    font-size: 30px;
+    text-shadow:
+        0.5px 0.5px white,
+        -0.5px 0.5px white,
+        0.5px -0.5px white,
+        -0.5px -0.5px white;
+}
+
+a {
+    color: black;
+}
+
+@media (max-width: 350px) {
+
+    h1,
+    h2,
+    h3 {
+        font-size: 16px;
+
+    }
+
+    #Begin,
+    #Wands {
+
+        text-shadow:
+            0.02px 0.02px white,
+            -0.02px 0.02px white,
+            0.02px -0.02px white,
+            -0.02px -0.02px white;
+        font-size: 28px;
+        font-weight: bolder;
+        font-family: 'Brush Script MT', cursive;
+
+    }
+
+}
+
+#Wands {
     background-image: url(img/harry_potter_wallpaper__gryffindor_pinstripes_by_theladyavatar_d6l7u6e-fullview.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
@@ -33,6 +107,19 @@ form {
     gap: 15px;
 }
 
+li {
+    /* text-shadow:
+        0.05px 0.05px white,
+        -0.05px 0.05px white,
+        0.05px -0.05px white,
+        -0.05px -0.05px white; */
+    font-size: 23px;
+    font-stretch: ultra-expanded;
+
+    font-family: 'Brush Script MT', cursive;
+
+}
+
 form label,
 form input,
 form select,
@@ -52,4 +139,51 @@ button {
     margin-top: 5px;
     margin-bottom: 5px;
     display: block;
+}
+
+footer {
+    font-size: 18px;
+}
+
+.slytherin-group {
+    background-color: #2E8B57;
+    /* Groene kleur voor Slytherin */
+    color: black;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+
+
+.gryffindor-group {
+    background-color: #B22222;
+    color: black;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.ravenclaw-group {
+    background-color: #4169E1;
+    /* Blauw voor Ravenclaw */
+    color: black;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.hufflepuff-group {
+    background-color: #FFD700;
+    /* Geel voor Hufflepuff */
+    color: black;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.mine-group {
+    background-color: #f5f5dc;
+
+    color: black;
 }

@@ -47,30 +47,76 @@ document.addEventListener("DOMContentLoaded", () => {
         const wands = JSON.parse(localStorage.getItem('wands')) || [];
         wandItems.innerHTML = ''; /* Maak de lijst leeg voordat we nieuwe items toevoegen */
 
+        const gryffindorHeader = document.createElement("h3");
+        gryffindorHeader.textContent = "Toverstokken van Gryffindor";
+        gryffindorHeader.classList.add("gryffindor-group");
+        wandItems.appendChild(gryffindorHeader);
+
         gryffindorWands.forEach(wand => {
             const newWandItem = document.createElement("li");
             newWandItem.textContent = `Naam: ${wand.name}, Kern: ${wand.core}, Lengte: ${wand.length} cm, Eigenaar: ${wand.owner}`;
             wandItems.appendChild(newWandItem);
 
         });
+
+        const spacer1 = document.createElement("div");
+        spacer1.style.margin = "30px 0";
+        wandItems.appendChild(spacer1);
+
+        const slytherinHeader = document.createElement("h3");
+        slytherinHeader.textContent = "Toverstokken van Slytherin";
+        slytherinHeader.classList.add("slytherin-group");
+        wandItems.appendChild(slytherinHeader);
+
+        const spacer2 = document.createElement("div");
+        spacer1.style.margin = "30px 0";
+        wandItems.appendChild(spacer2);
+
         slytherinWands.forEach(wand => {
             const newWandItem = document.createElement("li");
             newWandItem.textContent = `Naam: ${wand.name}, Kern: ${wand.core}, Lengte: ${wand.length} cm, Eigenaar: ${wand.owner}`;
             wandItems.appendChild(newWandItem);
 
         });
+
+        const hufflepuffHeader = document.createElement("h3");
+        hufflepuffHeader.textContent = "Toverstokken van Hufflepuff";
+        hufflepuffHeader.classList.add("hufflepuff-group");
+        wandItems.appendChild(hufflepuffHeader);
+
+        const spacer3 = document.createElement("div");
+        spacer1.style.margin = "30px 0";
+        wandItems.appendChild(spacer3);
+
         hufflepuffWands.forEach(wand => {
             const newWandItem = document.createElement("li");
             newWandItem.textContent = `Naam: ${wand.name}, Kern: ${wand.core}, Lengte: ${wand.length} cm, Eigenaar: ${wand.owner}`;
             wandItems.appendChild(newWandItem);
 
         });
+
+
+        const ravenclawHeader = document.createElement("h3");
+        ravenclawHeader.textContent = "Toverstokken van Ravenclaw";
+        ravenclawHeader.classList.add("ravenclaw-group");
+        wandItems.appendChild(ravenclawHeader);
+
+        const spacer4 = document.createElement("div");
+        spacer1.style.margin = "30px 0";
+        wandItems.appendChild(spacer4);
+
+
         ravenclawWands.forEach(wand => {
             const newWandItem = document.createElement("li");
             newWandItem.textContent = `Naam: ${wand.name}, Kern: ${wand.core}, Lengte: ${wand.length} cm, Eigenaar: ${wand.owner}`;
             wandItems.appendChild(newWandItem);
 
         });
+
+        const MineHeader = document.createElement("h3");
+        MineHeader.textContent = "Toverstokken door mij aangemaakt";
+
+        wandItems.appendChild(MineHeader);
 
         /* Loopt door de opgeslagen toverstokken en voeg ze toe aan de lijst */
         wands.forEach(wand => {
@@ -90,14 +136,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     };
 
-    // Verwijder een toverstok uit localStorage
+    /* Verwijderd een toverstok uit localStorage */
     const removeWand = (wandName) => {
         let wands = JSON.parse(localStorage.getItem('wands')) || [];
-        wands = wands.filter(wand => wand.name !== wandName); // Verwijder de toverstok op basis van naam
-        localStorage.setItem('wands', JSON.stringify(wands)); // Sla de bijgewerkte lijst op
-        loadWandsFromStorage(); // Herlaad de lijst om de wijzigingen te tonen
+        wands = wands.filter(wand => wand.name !== wandName);
+        localStorage.setItem('wands', JSON.stringify(wands));
+        loadWandsFromStorage();
     };
-
     loadWandsFromStorage();
 
     newWandBtn.addEventListener("click", () => {
@@ -116,6 +161,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const owner = document.getElementById("owner").value;
 
         const newWand = { name, core, length, owner };
+
 
         /* Dit haalt de bestaande toverstokken op uit localStorage en voeg de nieuwe toe
         */

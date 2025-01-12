@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harry Potter Wands</title>
+    <link rel="stylesheet" href="stijl.css">
+    <link href="https://fonts.cdnfonts.com/css/harry-potter" rel="stylesheet">
+    <style>
+        @import url('https://fonts.cdnfonts.com/css/harry-potter');
+    </style>
+
+</head>
+
+<body id="Wands">
+    <div class="container">
+
+        <h1>Welkom bij Ollivanders Toverstokken Winkel</h1>
+        <h1>Onthou de toverstok kiest de tovernaar</h1>
+        <!-- Knop om het formulier te activeren -->
+        <h2>Nieuwe Toverstok Toevoegen</h2>
+        <button id="new-wand-btn">Nieuwe Toverstok</button>
+
+        <form id="stick-form">
+
+            <!-- "https://www.w3schools.com/html/html_forms.asp" bron voor hoe ik een formulier opstel en waar iemand iets kan typen-->
+
+            <!-- Kern keuzemenu -->
+            <label for="core">Kern:</label>
+            <select id="core" required>
+                <option value="" disabled selected>Kies een kern</option>
+                <option value="dragon-heartstring">Drakenhartsnaar</option>
+                <option value="unicorn-hair">Eenhoornhaar</option>
+                <option disabled>--- Zeldzame kernen ---</option>
+                <option value="phoenix-feather">Fenixveer</option>
+                <option value="thestral-tail-hair">Thestralstaarthaar</option>
+                <option value="basilisk-horn">Basilisk-hoorn</option>
+                <option value="wampus-cat-hair">Wampuskat-haar</option>
+                <option value="thunderbird-feather">Veer van een Thunderbird</option>
+                <option value="white-river-monster-spine">Haar van een White River Monster</option>
+                <option value="rougarou-hair">Rougarou-haar</option>
+                <option value="augurey-feather">Veer van een Augurey</option>
+            </select>
+
+            <!-- Voor een persoon die de website bezoekt neem ik altijd aan dat ze niks van Harry Potter afweten waardoor ik een dropdown menu heb toegevoegd waardoor mensen kunne kiezen en kijken wat de keuzes zijn. 
+                "https://blog.hubspot.com/website/html-dropdown", "https://www.geeksforgeeks.org/how-to-disable-the-drop-down-list-in-html5/" <-- de bron voor hoe ik een drop down menu heb gebruikt en hoe ik sommige keuzes heb gedissabled.-->
+
+            <label for="length">Lengte (in cm):</label>
+            <input type="number" id="length" min="20" max="46" step="0.01" required>
+            <!-- Zodat iemand niet een oneindig groot getal typt of een getal met heel veel decimalen heb ik via de min en max en step er een beperking opgezet zodat dit niet meer mogelijk is:
+                "https://www.w3schools.com/html/html_form_input_types.asp" -->
+
+            <label for="owner">Eigenaar:</label>
+            <input type="text" id="owner" required>
+
+            <label for="name">Naam:</label>
+            <input type="text" id="name">
+
+            <button type="submit">Toevoegen</button>
+            <button type="button" id="cancel-btn">Terug</button>
+        </form>
+
+        <div id="stick-list">
+            <h2>Toverstokkenlijst</h2>
+            <ul id="wand-items">
+                <!-- Toegevoegde toverstokken komen hier -->
+            </ul>
+        </div>
+
+    </div>
+    <script src="NewWand.js"></script> <!-- Hier verbind ik de script voor de toverstokken met de html code. -->
+
+
+    <footer id="footer">
+        <p>klik <a href="index.html"> hier</a> om terug te gaan</p>
+        <p>&#169; - Joaquin Smits</p>
+    </footer>
+</body>
+
+
+
+</html>
