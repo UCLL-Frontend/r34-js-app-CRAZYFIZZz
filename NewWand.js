@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const wandItems = document.getElementById("wand-items");
     const cancelBtn = document.getElementById("cancel-btn");
 
-
     const slytherinWands = [
         { name: "Salazar Slytherin's Wand", core: "Basilisk-horn", length: 33.02, owner: "Salazar Slytherin" },
         { name: "Tom Riddle's Wand", core: "dragon heartstring", length: 34.29, owner: "Tom Riddle / Lord Voldemort" },
